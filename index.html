@@ -69,6 +69,18 @@ root.setThemes([am5themes_Animated.new(root)]);
 
 var chart = root.container.children.push(am5map.MapChart.new(root, {}));
 
+// Create title
+var title = chart.children.unshift(am5.Label.new(root, {
+  text: "Wave 1",
+  fontSize: 25,
+  fontWeight: "bold",
+  textAlign: "center",
+  x: am5.p50,
+  centerX: am5.p50,
+  paddingTop: 20,
+  paddingBottom: 20
+}));
+
 var polygonSeries = chart.series.push(
   am5map.MapPolygonSeries.new(root, {
     geoJSON: am5geodata_worldLow,
@@ -163,8 +175,9 @@ setInterval(function() {
 
 function updateData() {
   for (var i = 0; i < bubbleSeries.dataItems.length; i++) {
-    bubbleSeries.data.setIndex(i, { value: Math.round(Math.random() * 100), id: data[i].id, name: data[i].name })
+    bubbleSeries.data.setIndex(i, { value: Math.round(Math.random() * 100), id: data[i].id, name: data[i].name });
   }
+  title.set("text");
 }
 
 
