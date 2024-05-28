@@ -60,8 +60,7 @@ var data = [
   }, {
     id: "FR",
     name: "France",
-    value: 100,
-    fill: am5.color(0x009900)
+    value: 100
   }
 ];
 
@@ -80,6 +79,7 @@ var polygonSeries = chart.series.push(
 var bubbleSeries = chart.series.push(
   am5map.MapPointSeries.new(root, {
     valueField: "value",
+    fill: am5.color(0x009900),
     calculateAggregates: true,
     polygonIdField: "id"
   })
