@@ -88,18 +88,14 @@ var bubbleSeries = chart.series.push(
 
 // Create series for background fill
 // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
-chart.chartContainer.set("background", am5.Rectangle.new(root, {
-  fill: am5.color(0x8ad0ff),
-  fillOpacity: 1
-}));
 
 var backgroundSeries = chart.series.unshift(
   am5map.MapPolygonSeries.new(root, {})
 );
   
 backgroundSeries.mapPolygons.template.setAll({
-  fill: am5.color(0x009900),
-  stroke: am5.color(0xd4f1f9),
+  fill: am5.color(0xffffff),
+  stroke: am5.color(0x009900),
   fillOpacity: 1,
   strokeOpacity: 0.05
 });
