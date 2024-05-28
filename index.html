@@ -79,6 +79,7 @@ var polygonSeries = chart.series.push(
 var bubbleSeries = chart.series.push(
   am5map.MapPointSeries.new(root, {
     valueField: "value",
+    fillOpacity: 0.7,
     fill: am5.color(0x009900),
     calculateAggregates: true,
     polygonIdField: "id"
