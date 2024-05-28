@@ -60,15 +60,17 @@ var data = [
   }, {
     id: "FR",
     name: "France",
-    value: 100
+    value: 100,
+    fill: am5.color(0x009900)
   }
 ];
 
 // Add chart title
 var title = chart.titles.create();
 title.text = "Wave 1";
-title.fontSize = 50;
+title.fontSize = 25;
 title.marginBottom = 30;
+
 var root = am5.Root.new("chartdiv");
 root.setThemes([am5themes_Animated.new(root)]);
 
